@@ -8,9 +8,6 @@ I also put my short brief and my contact on this website.
 Feel free to ask the details or you want to collaboration for sharing similiar projects.
 
 Look at my first project here!
-> https://devjuhans.github.io/experience/
->
-Or Visit
 > https://juhans.my.id/
 
 ## Features
