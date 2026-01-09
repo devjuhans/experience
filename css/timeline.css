@@ -1,0 +1,50 @@
+/* ===== YEAR TIMELINE (NO BACKGROUND) ===== */
+#yearControl {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    z-index: 10000;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+}
+
+/* year buttons */
+.year-pills {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.year-pill {
+    padding: 6px 10px;
+    border-radius: 8px;
+    font-size: 0.75rem;
+    cursor: pointer;
+    text-align: center;
+    user-select: none;
+    background: rgba(255,255,255,0.85);
+    box-shadow: 0 2px 6px rgba(0,0,0,.25);
+}
+
+.year-pill.active {
+    background: #0d6efd;
+    color: #fff;
+}
+
+/* horizontal slider */
+#yearSlider {
+    width: 300px;
+    height: 8px;
+    background: rgba(255,255,255,0.8);
+}
+
+#yearSlider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background: #0d6efd;
+    cursor: pointer;
+}

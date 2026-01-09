@@ -1,0 +1,215 @@
+html, body{
+  margin: 0;
+  padding: 0;  
+  height: 96%;
+  width: 100%;
+}
+
+body {
+  overflow: hidden;
+}
+
+#map {
+  height: 100%;
+  width: 100%;
+}
+
+.bootstrap-marker {
+  font-size: 25px;
+  color: #7e2800;
+  text-align: center;
+}
+
+.justified {
+    text-align: justify;
+}
+
+.basemap-switcher {
+  position: absolute;
+  top: 20px;
+  right: 130px;
+  z-index: 9999;
+  display: flex;
+  gap: 10px; 
+}
+
+.basemap-thumb {
+  width: 65px;
+  height: 65px;
+  border-radius: 10px;
+  overflow: hidden;
+  border: 2px solid #fff;
+  cursor: pointer;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+  transition: transform 0.15s ease;
+  background: #eee;
+}
+
+.basemap-thumb:hover {
+  transform: scale(1.07);
+}
+
+.basemap-thumb.active {
+  border: 3px solid #109cdd;
+}
+
+.basemap-thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.bootstrap-marker {
+    font-size: 26px;
+    text-align: center;
+}
+
+.leaflet-popup-content {
+    min-width: 320px;
+}
+
+/* Floating logo */
+.leaflet-logo {
+    position: absolute;
+    bottom: 0px;       /* posisi vertikal */
+    left: 7px;      /* posisi horizontal */
+    z-index: 1000;   /* di atas peta */
+}
+
+.leaflet-logo img {
+    width: 450px;     /* smaller size for logo */
+    height: auto;    /* menjaga proporsi */
+    cursor: pointer; /* menandakan bisa diklik */
+    border-radius: 50%; /* opsional, kalau mau logo bulat */
+    transition: transform 0.2s ease;
+}
+
+.leaflet-logo img:hover {
+    transform: scale(1.1); /* efek hover kecil */
+}
+
+/* Floating Social Media Bar */
+.leaflet-social-bar {
+    position: absolute;
+    bottom: 40px;       /* bisa diubah top/bottom */
+    left: 120px;         /* bisa diubah kiri/kanan */
+    z-index: 1000;
+    display: flex;
+    gap: 30px;          /* jarak antar logo */
+}
+
+.leaflet-social-bar a img {
+    width: 25px;        /* ukuran logo */
+    height: auto;
+    cursor: pointer;
+    transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+.leaflet-social-bar a img:hover {
+    transform: scale(1.2);
+    opacity: 0.9;
+}
+
+/* Logo Overlay (Lightbox) */
+.logo-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 10000;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease;
+}
+
+.logo-overlay.show {
+    opacity: 1;
+    visibility: visible;
+}
+
+.logo-overlay img {
+    max-width: 80%;
+    max-height: 80%;
+    cursor: pointer;
+    border-radius: 20px;
+}
+
+/* Tooltip for CV download */
+.icon-tooltip {
+    position: relative;
+    display: inline-block;
+}
+
+.icon-tooltip img {
+    width: 40px; /* sesuaikan */
+    cursor: pointer;
+}
+
+.tooltip-text {
+    position: absolute;
+    top: 120%;
+    left: 50%;
+    transform: translateX(-50%);
+    background: rgba(0,0,0,0.85);
+    color: #fff;
+    padding: 6px 10px;
+    border-radius: 6px;
+    font-size: 12px;
+    white-space: nowrap;
+
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.2s ease;
+    pointer-events: none;
+    z-index: 20000;
+}
+
+
+.map-footer {
+  overflow: visible;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  padding-bottom: 8px;
+
+  width: 100%;
+  height: 75px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  z-index: 9999;
+}
+
+.footer-link {
+  transition: color .2s ease, transform .2s ease;
+}
+
+.footer-link:hover {
+  color: var(--bs-info);
+  transform: scale(1.25);
+}
+
+.footer-logo {
+  height: 125px;        /* similar to fs-3 icon size */
+  width: auto;
+  display: block;
+  margin-top: 5px
+}
+.footer-logo:hover {
+  transform: scale(1.05);
+}
+
+.tooltip {
+  z-index: 20000 !important;
+  margin-bottom: 10px;
+}
+
+
+
